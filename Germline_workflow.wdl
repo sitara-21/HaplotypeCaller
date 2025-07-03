@@ -137,7 +137,7 @@ task HaplotypeCaller {
 
   command <<<
   set -e
-  
+  module load gcc java
     ${gatk_path} --java-options "-Xmx${command_mem_gb}G ${java_opt}" \
       HaplotypeCaller \
       -R ${ref_fasta} \
@@ -188,7 +188,7 @@ task HaplotypeCaller_other {
 
   command <<<
   set -e
-  
+  module load gcc java
     ${gatk_path} --java-options "-Xmx${command_mem_gb}G ${java_opt}" \
       HaplotypeCaller \
       -R ${ref_fasta} \
